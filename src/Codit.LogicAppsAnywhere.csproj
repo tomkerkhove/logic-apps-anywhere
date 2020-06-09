@@ -24,4 +24,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.0.0.6-preview"/>
   </ItemGroup>
+  <ItemGroup>
+    <None Update="connections.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
