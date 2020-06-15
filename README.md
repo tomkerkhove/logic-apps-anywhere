@@ -11,5 +11,5 @@ Build the app as a Docker image:
 
 Run the Docker image:
 ```
-❯ docker run -d -p 8080:80 logic-apps-anywhere -e "AzureWebJobsStorage=<connection-string>"
+❯ docker run -d -p 8080:80 -e "AzureWebJobsStorage=<connection-string>" logic-apps-anywhere
 ```
