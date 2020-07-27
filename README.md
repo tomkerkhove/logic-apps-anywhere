@@ -21,7 +21,7 @@ Run on Kubernetes:
 
 Get the callback URL to trigger the workflow via cURL:
 ```shell
-❯ curl --location --request POST 'http://localhost:8080/runtime/webhooks/flow/api/management/workflows/StatefulSample/triggers/manual/listCallbackUrl?api-version=2019-10-01-edge-preview&code=<key>'
+❯ curl --location --request POST 'http://localhost:8080/runtime/webhooks/flow/api/management/workflows/StatefulSample/triggers/manual/listCallbackUrl?api-version=2019-10-01-edge-preview&code=<key>' --header "Content-Length: 0"
 {
   "value": "https://localhost:443/api/StatefulSample/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=<sig>",
   "method": "POST",
@@ -37,7 +37,7 @@ Get the callback URL to trigger the workflow via cURL:
 
 Trigger the workflow via cURL:
 ```shell
-❯ curl --location --request POST 'http://localhost:8080/api/StatefulSample/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=<sig>'
+❯ curl --location --request POST 'http://localhost:8080/api/StatefulSample/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=<sig>' --header "Content-Length: 0"
 {
     "Message": "Hello from the workflow triggered function"
 }
